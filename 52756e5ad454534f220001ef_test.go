@@ -12,19 +12,20 @@ func testLCS(s1, s2, s string) {
 
 var _ = Describe("Sample Test Cases", func() {
 
-	It("LCS should work on sample case #1", func() {
-		//testLCS("a", "b", "")
-	})
-	It("LCS should work on sample case #1", func() {
-		//testLCS("MZJAWXU", "XMJYAUZ", "MJAU")
+	XIt("LCS should work on sample case #1", func() {
+		testLCS("a", "b", "")
 	})
 
-	It("LCS should work on sample case #2", func() {
-		//testLCS("abcdef", "abc", "abc")
+	XIt("LCS should work on sample case #1", func() {
+		testLCS("MZJAWXU", "XMJYAUZ", "MJAU")
 	})
 
-	It("LCS should work on sample case #3", func() {
-		//testLCS("132535365", "123456789", "12356")
+	XIt("LCS should work on sample case #2", func() {
+		testLCS("abcdef", "abc", "abc")
+	})
+
+	XIt("LCS should work on sample case #3", func() {
+		testLCS("132535365", "123456789", "12356")
 	})
 })
 //FIXME https://en.wikipedia.org/wiki/Longest_common_subsequence_problem#First_property
