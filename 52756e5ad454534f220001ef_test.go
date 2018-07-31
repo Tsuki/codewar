@@ -3,6 +3,7 @@ package kata_test
 import (
 	. "github.com/onsi/ginkgo"
 	. "github.com/onsi/gomega"
+	"fmt"
 )
 
 func testLCS(s1, s2, s string) {
@@ -47,14 +48,16 @@ func LCS(s1, s2 string) string {
 		}
 	}
 	for h := len(s2); h > 1; h-- {
-		for v := len(s1); v > 1; v-- {
-			if a[h][v] == a[h-1][v] {
-				//fmt.Println(a[h][v])
+		for v := len(s1); v > 1 || h > 1; v-- {
+			for a[h][v] == a[h-1][v] {
+				fmt.Print(a[h-1][v], []int{h-1, v})
+				h--
 			}
 		}
 	}
-	//for _, v := range a {
-	//	fmt.Println(v)
-	//}
+	fmt.Println()
+	for _, v := range a {
+		fmt.Println(v)
+	}
 	return result
 }
