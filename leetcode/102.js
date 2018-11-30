@@ -6,7 +6,6 @@
  * }
  */
 
-var assert = require('assert');
 
 function TreeNode(val) {
     this.val = val;
@@ -18,7 +17,7 @@ function TreeNode(val) {
  * @return {number[][]}
  */
 
-var levelOrder = function (root) {
+const levelOrder = function (root) {
     if (root === null) {
         return []
     }
@@ -52,6 +51,7 @@ function getRoot(root) {
     return [a.filter(c => c == null), b.filter(c => c == null)]
 }
 
+const assert = require('assert');
 const order = new TreeNode(3);
 order.left = new TreeNode(9);
 order.right = new TreeNode(20);

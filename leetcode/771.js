@@ -3,7 +3,7 @@
  * @param {string} S
  * @return {number}
  */
-var numJewelsInStones = function (J, S) {
+const numJewelsInStones = function (J, S) {
     let sum = 0;
     for (const j of J) {
         for (const s of S) {
@@ -15,7 +15,7 @@ var numJewelsInStones = function (J, S) {
     return sum
 };
 
-var assert = require('assert');
+const assert = require('assert');
 describe('Array', function () {
     describe('numJewelsInStones', function () {
         it('1', function () {
